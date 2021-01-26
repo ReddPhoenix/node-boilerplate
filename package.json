@@ -1,0 +1,20 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "Node.js REST API Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongo-sanitize": "^1.1.0",
+    "mongoose": "^5.11.13",
+    "morgan": "^1.10.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {}
+}
