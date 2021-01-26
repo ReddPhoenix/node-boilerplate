@@ -1,8 +1,22 @@
 const express = require('express');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
+require('dotenv').config();
 
 // Call express
 const app = express();
+
+// Mongoose
+mongoose.connect(process.env.MONGO_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+})
+    .then(() => {
+        console.log('Database connection success!')
+    })
+    .catch((err) => {
+        console.log('Mongo Connection Error', err);
+    });
 
 // Declare port number to be used
 const PORT = process.env.port || 3000;
