@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const restrictOrigin = require('./middlewares/restrictOrigin');
 require('dotenv').config();
 
 // Call express
@@ -23,6 +24,7 @@ const PORT = process.env.port || 3000;
 
 // Allows use of request body as req.body
 app.use(express.json());
+app.use(restrictOrigin);
 
 // Enable incoming request logging in dev mode
 app.use(morgan('dev'));
